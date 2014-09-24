@@ -31,8 +31,8 @@ define('ENV', 'TESTING');
 // DB
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'demostrona_nasz');
-define('DB_PASSWORD', 'T718VLwM03');
-define('DB_DATABASE', 'demostrona_nasz');
+define('DB_USERNAME', 'demostrona_row2');
+define('DB_PASSWORD', 'nCTBMVy3cX');
+define('DB_DATABASE', 'demostrona_row2');
 define('DB_PREFIX', '');
 ?>
