@@ -18,7 +18,7 @@
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 <?php } ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/livesearch.css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet" />
 <link href="catalog/view/javascript/selecter/src/jquery.fs.selecter.css" rel="stylesheet" />
@@ -85,7 +85,7 @@
 			  <div class="autowidth mobilehide">
 				<div id="account">
 				<div>
-					<span>&nbsp;</span><h4><?php echo $this->language->get('text_witaj'); ?> <span><?php if ($logged) { ?> <?php echo $text_logged; ?> <?php } else { echo $text_welcome; } ?></span></h4>
+					<i class="fa fa-user headeri"></i><h4><?php echo $this->language->get('text_witaj'); ?> <span><?php if ($logged) { ?> <?php echo $text_logged; ?> <?php } else { echo $text_welcome; } ?></span></h4>
 					<div class="shadow">						
 						<div class="rog"></div>
 						<?php if (!$logged) { ?>
@@ -133,7 +133,7 @@
 	  </div>
 	</div>
 </div>
-<div id="header-menu" class="gradient-light">
+<div id="header-menu">
 	<div class="poziom">
 		<?php if(Utilities::isController('checkout/checkout')) { ?>
 			<div id="menu">

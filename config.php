@@ -24,7 +24,7 @@ define('DIR_CACHE', '/home/demostrona/domains/demo.stronazen.pl/public_html/rowe
 define('DIR_DOWNLOAD', '/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/download/');
 define('DIR_LOGS', '/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/system/logs/');
 
-define('ENV', 'TESTING');
+define('ENV', 'PRODUCTION');
 
 
 

@@ -1,206 +1,102 @@
-<?php echo $header; ?><?php // echo $column_left; ?>
-<div id="content"><?php // echo $content_top; ?>
+<?php echo $header; ?><?php // echo $column_left; $column_right; $content_bottom; $content_top; ?>
 
 <div id="home-top">
-	<div>
-		<div>
+	<div class="small">
+		<div class="leftmenu">
 			<div>
-				<h2><?php echo $this->language->get('text_kategorie_popularne'); ?></h2>
+				<h2>Popular kat (All p)</h2>
 				<ul>
-					<li><a href="#">Lorem ipsum lorem</a></li>
 					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Ipsum lorem</a></li>
-					<li><a href="#">Lorem lorem lorem ipsum</a></li>
-					<li><a href="#">Dolos ipsum lorem</a></li>
-					<li><a href="#">Ipsum lorem</a></li>
-					<li><a href="#">Lorem lorem lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
 				</ul>
 			</div>
 			<div>
-				<h2><?php echo $this->language->get('text_produkty_popularne'); ?></h2>
+				<h2>Popular kat (All p)</h2>
 				<ul>
-					<li><a href="#">Lorem ipsum lorem</a></li>
 					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Ipsum lorem</a></li>
-					<li><a href="#">Lorem lorem lorem ipsum</a></li>
-					<li><a href="#">Dolos ipsum lorem</a></li>
-					<li><a href="#">Ipsum lorem</a></li>
-					<li><a href="#">Lorem lorem lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>Popular kat (All p)</h2>
+				<ul>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div>
-		<?php echo $column_left; ?>
+	<div class="center">
+		<div>
+			<div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-pause-on-hover="true" data-cycle-pager=".pager">
+				<div>
+					<h1>Lorem ipsum slider 1</h1>
+					<img src="./image/demo/lanai.jpg" alt=""/>
+					<div class="ctas">
+						<div class="table">
+							<div>
+								<a href="#" class="button">Lorem ipsum <i class="fa fa-bicycle"></i></a>
+							</div>
+							<div>
+								<a href="#" class="button">Ipsum lorem <i class="fa fa-check"></i></a>
+							</div>
+							<div>
+								<a href="#" class="button">Ilori <i class="fa fa-thumbs-o-up"></i></a>
+							</div>
+							<div>
+								<a href="#" class="button">Ipsum cta <i class="fa fa-users"></i></a>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div>
+					<h1>Ipsumus loremus slider 2</h1>
+					<img src="./image/demo/red.jpg" alt=""/>
+					<div class="ctas">
+						<div class="table">
+							<div>
+								<a href="#" class="button">Lorem ipsum <i class="fa fa-bicycle"></i></a>
+							</div>
+							<div>
+								<a href="#" class="button">Ipsum lorem <i class="fa fa-thumbs-o-up"></i></a>
+							</div>
+							<div>
+								<a href="#" class="button">Ilori <i class="fa fa-check"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pager"></div>
+		</div>
 	</div>
-</div>
-
-<div class="table trzy" id="inform">
-	<div>
-		<div class="zalety">
-			<div>
-				<h2><?php echo $this->language->get('home_zalety_h2'); ?></h2>
-				<p><?php echo $this->language->get('home_zalety_p'); ?></p>
-				<ul><?php echo $this->language->get('home_zalety_ul'); ?></ul>
-				<p><?php echo $this->language->get('home_zalety_p2'); ?></p>
-			</div>
-		</div>
-	</div>
-	<div>
-		<h2><?php echo $this->language->get('home_platnosci_h2'); ?></h2>
-		<p><?php echo $this->language->get('home_platnosci_p'); ?></p>
-		<div class="table">
-			<div><img src="./image/paym/paypal.jpg" alt="paypal"></div>
-			<div><img src="./image/paym/master.jpg" alt="master"></div>
-			<div><img src="./image/paym/visa.jpg" alt="visa"></div>
-		</div>
-		<div class="table margin">
-			<div><img src="./image/paym/sofort.png" alt="sofort"></div>
-			<div><img src="./image/paym/vorkasse.gif" alt="vorkasse"></div>
-			<div></div>
-		</div>
-		<h2><?php echo $this->language->get('home_dostawy_h2'); ?></h2>
-		<p><?php echo $this->language->get('home_dostawy_p'); ?></p>
-		<div class="table">
-			<div><img src="./image/paym/dpd.jpg" alt="ups"></div>
-		</div>
-	</div>
-	<div>
-		<h2><?php echo $this->language->get('home_polecamy_h2'); ?></h2>
-		<?php echo $column_right; ?>
-	</div>
-</div>
-
-<div>
-	<?php echo $content_top; ?>
-</div>
-
-<div id="home-kat">
-	<div>
+	<div class="small banerki">
 		<div>
-			<div>
-				<img src="./image/home/dlugopisy.jpg" alt="Schreibartikel" width="368" height="200" />
-				<a href="#">schreibartikel <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
+			<h3>Lorem ipsum</h3>
+			<img src="./image/demo/banerek.jpg" alt=""/>
 		</div>
 		<div>
-			<div>
-				<img src="./image/home/promocyjne.jpg" alt="Promotion & Streuartikel" width="368" height="200" />
-				<a href="#">Promotion & Streuartikel <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>			
-		<div>
-			<div>
-				<img src="./image/home/breloczki.jpg" alt="Schluesselanhaenger" width="368" height="200" />
-				<a href="#">Schluesselanhaenger  <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
+			<h3>Lorem ipsum</h3>
+			<img src="./image/demo/banerek2.jpg" alt=""/>
 		</div>
 		<div>
-			<div>
-				<img src="./image/home/dzieci.jpg" alt="Für Kinder" width="368" height="200" />
-				<a href="#">Für Kinder <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img src="./image/home/notesy.jpg" alt="Notizbücher" width="368" height="200" />
-				<a href="#">Notizbücher <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img src="./image/home/bezpieczenstwo.jpg" alt="Sicherheit" width="368" height="200" />
-				<a href="#">Sicherheit <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img src="./image/home/parasole.jpg" alt="Schirme" width="368" height="200" />
-				<a href="#">Schirme <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img src="./image/home/antystres.jpg" alt="Anti-Stress-Artikel" width="368" height="200" />
-				<a href="#">Anti-Stress-Artikel <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img src="./image/home/termosy.jpg" alt="Isolier-, Thermos- & Trinkflaschen" width="368" height="200" />
-				<a href="#">Isolier-, Thermos- & Trinkflaschen <i class="fa fa-chevron-circle-right"></i></a>
-			</div>
+			<h3>Lorem ipsum</h3>
+			<img src="./image/demo/banerek3.jpg" alt=""/>
 		</div>
 	</div>
 </div>
 
-<div id="home-mid">
-	<?php echo $content_bottom; ?>
-</div>
-
-<div id="home-kafle">
-	<div class="table">
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>		
-	</div>
-	<div class="table">
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>		
-	</div>
-	<div class="table">
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>
-		<div>
-			<div>
-				<div><a href="#"><img src="./neon.jpg" alt=""/></a></div>
-				<div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum purus nec nibh viverra, non faucibus dui pretium. Suspendisse eget est ullamcorper, sagittis mauris quis, tincidunt orci. Duis ultrices, quam vel elementum aliquam, metus tortor venenatis dui, facilisis sodales ligula quam ut tellus.</p><a href="#" >Wszystkie produkty z kategorii lorem ipsum <i class="fa fa-angle-right"></i></a></div>
-			</div>
-		</div>		
-	</div>
-</div>
-
-</div>
 
 <?php echo $footer; ?>

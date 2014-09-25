@@ -2,8 +2,11 @@
 <div>
   <div class="heading">
 	<div>
-		<a href="./index.php?route=checkout/cart"><h4><?php echo $heading_title; ?></h4>
-		<span id="cart-total"><?php echo $text_items; ?></span></a>
+		<i class="fa fa-shopping-cart headeri"></i>
+		<a href="./index.php?route=checkout/cart">
+			<h4><?php echo $heading_title; ?></h4>
+			<span id="cart-total"><?php echo $text_items; ?></span>
+		</a>
 	</div>
    </div>
 </div>

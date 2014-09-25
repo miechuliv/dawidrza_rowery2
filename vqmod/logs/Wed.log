@@ -1389,3 +1389,107 @@ SEARCH NOT FOUND (ABORTING MOD): name="keyword"
 ----------------------------------------------------------------------
 
 
+---------- Date: 2014-09-24 10:40:07 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/vqmod_profiler.xml
+   id        : OpenCart profiler
+   version   : 1.0
+   vqmver    : 1
+   author    : Alexander Toporkov (toporchillo@gmail.com)
+SEARCH NOT FOUND (ABORTING MOD): $controller->$method($args);
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:33:03 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:33:35 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:39:49 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:41:59 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:42:11 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:42:27 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/update&amp;token=b561baab887ce476f39c83d8a22f1466&amp;category_id=56
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-24 13:42:41 ~ IP : 46.175.230.17 ----------
+REQUEST URI : /rowery2/admin/index.php?route=catalog/category/insert&amp;token=b561baab887ce476f39c83d8a22f1466
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/vqmod/xml/Auto-SEO-keywords-URL.xml
+   id        : Auto SEO Keywords
+   version   : 1
+   vqmver    : 
+   author    : Creative Ground
+SEARCH NOT FOUND (ABORTING MOD): name="keyword"
+
+----------------------------------------------------------------------
+
+
