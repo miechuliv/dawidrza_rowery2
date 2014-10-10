@@ -11,8 +11,9 @@
    </div>
 </div>
 
-  <div class="content shadow">
+  <div class="content">
   <div class="rog"></div>
+  <div class="bg shadow">
     <?php if ($products || $vouchers) { ?>
     <div class="mini-cart-info">
       <table>
@@ -61,6 +62,7 @@
       </table>
     </div>
 	*/?>
+	<?/*
 	<div class="podlicz">
 	
 	<?php 
@@ -76,13 +78,14 @@
 	<?php } ?>
 
 	</div>
+	*/?>
     <div class="butki">
-	<a href="<?php echo $checkout; ?>" class="button long ultra"><?php echo $text_checkout; ?> <img alt="" src="./image/arrr.png" class="buttonarrow"></a>
+	<a href="<?php echo $checkout; ?>" class="button action long"><?php echo $text_checkout; ?> <i class="fa fa-arrow-right"></i></a>
 	<a href="<?php echo $cart; ?>" class="button long"><?php echo $text_cart; ?></a> 
 	</div>
     <?php } else { ?>
     <div class="empty"><?php echo $text_empty; ?></div>
     <?php } ?>
   </div>
-
+</div>
 </div>

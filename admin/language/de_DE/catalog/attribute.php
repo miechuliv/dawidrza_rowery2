@@ -20,3 +20,5 @@ $_['entry_sort_order']       = 'Reihenfolge';
 $_['error_permission']       = 'Keine Rechte für diese Aktion!';
 $_['error_name']             = 'Name muss zwischen 3 und 64 Zeichen lang sein';
 $_['error_product']          = 'Diese Eigenschaft kann nicht gelöscht werden da ihr %s Produkt(e) zugeordnet ist/sind!';
+
+$_['entry_front'] = 'Status';

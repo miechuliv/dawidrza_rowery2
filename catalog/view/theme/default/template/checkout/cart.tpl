@@ -22,7 +22,7 @@
   </h1>
   <div class="buttons basket" style="margin-bottom:10px;">
 	<div class="left mobileshow"><a class="button grey cofka"><?php echo $button_shopping; ?></a></div>
-    <div class="right true"><a href="<?php echo $checkout; ?>" class="button ultra"><?php echo $button_checkout; ?> <img class="buttonarcol" src="./image/arrr.png" alt=""/></a></div>
+    <div class="right true"><a href="<?php echo $checkout; ?>" class="button action"><?php echo $button_checkout; ?> <i class="fa fa-arrow-right"></i></a></div>
    <?/* <div class="left"><a class="button grey cofka"><?php echo $button_shopping; ?></a></div> */?>
   </div>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
@@ -206,12 +206,14 @@
 						</ul>
 					</div>
 				</div>
+				<?/*
 				<div id="nieosiagniete">
 					<?php echo $this->language->get('text_left'); ?> <strong id="wartosc"></strong> <?php echo $this->language->get('text_toofree'); ?>
 				</div>
 				<div id="osiagniete">
 					<strong class="cel"><?php echo $this->language->get('text_free_checkout'); ?></strong>
 				</div>
+				*/?>
 			</div>
 		</div>
 		<div>
@@ -239,7 +241,7 @@
 	  </div>
   </div>
   <div class="buttons">
-    <div class="right true mobile100"><a href="<?php echo $checkout; ?>" class="button ultra"><?php echo $button_checkout; ?> <img class="buttonarcol" src="./image/arrr.png" alt=""/></a></div>
+    <div class="right true mobile100"><a href="<?php echo $checkout; ?>" class="button action"><?php echo $button_checkout; ?> <i class="fa fa-arrow-right"></i></a></div>
     <div class="left mobilehide"><a class="button grey cofka"><?php echo $button_shopping; ?></a></div>
   </div>
   		<div class="mobileshow">
@@ -425,7 +427,7 @@ $('select[name=\'country_id\']').trigger('change');
      <?php } ?>
 	 
 	
-	
+	/*
 	function darmowa_wysylka() {	
 	
 		$('#nieosiagniete').hide();
@@ -445,12 +447,12 @@ $('select[name=\'country_id\']').trigger('change');
 			$('#nieosiagniete').show();
 			$('#osiagniete').hide();
 		}
-	}
-
+	}	
 	
 	$(document).ready(function() {	
 		darmowa_wysylka();
 	});
+	*/
 
     $('.quantity input').bind('keyup', function() {
             var quantity = $(this).val();

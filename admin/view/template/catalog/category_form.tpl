@@ -343,7 +343,7 @@
                             </td>
                             <td>
                                 <div onclick="$(this).parent().parent().remove();">
-                                    <img src="view/image/delete.png" />Usuń
+                                    <img src="view/image/delete.png" /> <?php echo $this->language->get('text_remove'); ?>
                                 </div>
                             </td>
                         </tr>
@@ -362,7 +362,7 @@
                         </td>
                         <td colspan="3">
                             <div onclick="addExtendedFilter(this)">
-                                <img src="view/image/add.png" />Dodaj filtr
+                                <img src="view/image/add.png" /> <?php echo $this->language->get('text_add'); ?>
                             </div>
                         </td>
                     </tr>

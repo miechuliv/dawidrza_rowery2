@@ -27,11 +27,11 @@
                     <table class="subtb">
                         <thead>
                         <tr>
-                            <td>Od</td>
-                            <td>Do</td>
-                            <td>Cena</td>
-                            <td>Ile kolorów</td>
-                            <td>Od sztuki ( TAK ) , ryczałt ( NIE )</td>
+                            <td><?php echo $this->language->get('od'); ?></td>
+                            <td><?php echo $this->language->get('do'); ?></td>
+                            <td><?php echo $this->language->get('cena'); ?></td>
+                            <td><?php echo $this->language->get('ile_kolorow'); ?></td>
+                            <td><?php echo $this->language->get('od_sztuki_czy_ryczalt'); ?></td>
                             <td></td>
                         </tr>
 
@@ -55,7 +55,7 @@
                         <?php } ?>
                         </tbody>
                         <tfoot>
-                        <td><div onclick="addPodGrupaDruku(this)" class="button">
+                        <td> <div onclick="addPodGrupaDruku(this)" class="button">
                                 <img src="view/image/add.png" /><?php echo $this->language->get('text_add_podgrupa_druku'); ?>
                             </div></td>
                         </tfoot>
@@ -69,7 +69,7 @@
 
             <tfoot>
             <tr>
-                <td><div class="button">
+                <td colspan="3"><div class="button">
                         <input type="text" name="nazwa" />
                         <img onclick="addGrupaDruku(this)" src="view/image/add.png" /><?php echo $this->language->get('text_add_grupa_druku'); ?>
                     </div></td>

@@ -517,7 +517,38 @@
 
 <div class="checkout-product">
 <h1>6. <?php echo $this->language->get('text_total'); ?></h1>
+	<div id="potwierdzenia">
+	
+				<?php if ($text_agree) { ?>
 
+					<div class="right checkbox">
+						<div>							
+							<?php if ($agree) { ?>
+							<input type="checkbox" name="agree" value="1" checked="checked" id="potw1"/>
+							<?php } else { ?>
+							<input type="checkbox" name="agree" value="1" id="potw1"/>
+							<?php } ?>
+							<label for="potw1"><?php echo $text_agree; ?></label>
+						</div>
+					</div>
+					<?/*
+					<div class="right">Die <a href="<?php echo $this->config->get('config_url'); ?>index.php?route=information/information/info&information_id=7" alt="Widerrufsbelehrung" class="colorbox cboxElement"><b>Widerrufsbelehrung</b></a> habe ich zur Kenntnis genommen.
+						<?php if ($agree2) { ?>
+						<input type="checkbox" name="agree2" value="1" checked="checked" id="potw2"/>
+						<?php } else { ?>
+						<input type="checkbox" name="agree2" value="1" id="potw2"/>
+						<?php } ?>	
+					</div>
+					*/?>
+
+				<?php } ?>
+
+    <div>
+		<div class="checkbox">							
+			<input type="checkbox" name="auto_account" value="1" checked="checked" id="chcekonto"/><label for="chcekonto"><?php echo $this->language->get('text_auto_account'); ?></label>
+		</div>
+	</div>
+	</div>	
     <table data-role="table" class="attribute ui-responsive table-stripe" style="margin:0">
         <thead>
         <tr>
@@ -563,45 +594,14 @@
         <?php } ?>
         </tfoot>
     </table>
-	<div id="potwierdzenia">
-	<div class="trust mobilehide absolut"></div>
-				<?php if ($text_agree) { ?>
 
-					<div class="right checkbox">
-						<div>							
-							<?php if ($agree) { ?>
-							<input type="checkbox" name="agree" value="1" checked="checked" id="potw1"/>
-							<?php } else { ?>
-							<input type="checkbox" name="agree" value="1" id="potw1"/>
-							<?php } ?>
-							<label for="potw1"><?php echo $text_agree; ?></label>
-						</div>
-					</div>
-					<?/*
-					<div class="right">Die <a href="<?php echo $this->config->get('config_url'); ?>index.php?route=information/information/info&information_id=7" alt="Widerrufsbelehrung" class="colorbox cboxElement"><b>Widerrufsbelehrung</b></a> habe ich zur Kenntnis genommen.
-						<?php if ($agree2) { ?>
-						<input type="checkbox" name="agree2" value="1" checked="checked" id="potw2"/>
-						<?php } else { ?>
-						<input type="checkbox" name="agree2" value="1" id="potw2"/>
-						<?php } ?>	
-					</div>
-					*/?>
-
-				<?php } ?>
-
-    <div>
-		<div class="checkbox">							
-			<input type="checkbox" name="auto_account" value="1" checked="checked" id="chcekonto"/><label for="chcekonto"><?php echo $this->language->get('text_auto_account'); ?></label>
-		</div>
-	</div>
-	
     <div class="buttons">
-        <div class="left">
-            <input type="button" onclick="finalize()"  class="button ultra" value="<?php echo $text_order_confirm ?>"/>
+        <div class="right true">
+           <div class="trust mobilehide" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0"></div> <input type="button" onclick="finalize()"  class="button action" value="<?php echo $text_order_confirm ?>"/>
         </div>
     </div>
 	
-	</div>
+
 	
 </div>
 <div class="payment" style="display:none;"></div>

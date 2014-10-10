@@ -29,7 +29,7 @@
 <link href="catalog/view/theme/default/stylesheet/table.css" rel="stylesheet" />
 <?php } ?>
 </head>
-<body> 
+<body <?php if(!Utilities::isController('common/home')) { ?>id="niehome"<? } ?>> 
 <div id="black"></div>
 
 <div id="header">
@@ -37,24 +37,23 @@
 		<div>
 
 		<?php if ($logo) { ?>
-			<div id="logo" class="autowidth padding0">
-				<a href="./">
-					<img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" />
-				</a>
-			</div>
-		<?php } ?>  
-			 <?/*
-				<div id="tel">
-					<?php echo $this->config->get('config_telephone'); ?><br/>
-					E-mail: <a href="mailto:<?php echo $this->config->get('config_email'); ?>"><?php echo $this->config->get('config_email'); ?></a>
+			<?php if(Utilities::isController('checkout/checkout')) { ?>
+				<div id="logo" class="autowidth padding0" style="text-align:center;width:100%;">
+					<a href="./index.php?route=checkout/cart">
+						<img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" />
+					</a>
+					<h2 style="margin:0">Kasse</h2>
 				</div>
-			*/?>
-			   <div id="search" class="mobilehide">
-			   <?php if(Utilities::isController('checkout/checkout')) { ?>
-					<div id="info-cart">
-						<small><?php echo $this->language->get('text_tel'); ?></small><strong><?php echo $this->config->get('config_telephone'); ?></strong>, <small><?php echo $this->language->get('text_email'); ?></small><a href="mailto:<?php echo $this->config->get('config_email'); ?>"><strong>	<?php echo $this->config->get('config_email'); ?></strong></a>
-					</div>
-				<?php } else { ?>
+			<?php } else { ?>
+				<div id="logo" class="autowidth padding0">
+					<a href="./">
+						<img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /> 
+					</a>
+				</div>
+		<?php } ?>
+		<?php } ?>  
+			<?php if(!Utilities::isController('checkout/checkout')) { ?>
+			   <div id="search" class="mobilehide">			   
 					<div>
 						<div> 
 							<div class="search-con">
@@ -75,53 +74,49 @@
 							</div>
 						</div>
 					</div>
-				<?php } ?>
 			  </div>
-			  <?/*
-			<div id="trusted" class="autowidth mobilehide padding0">
-				<div>&nbsp;</div>
-			</div>
-			  */?>
 			  <div class="autowidth mobilehide">
 				<div id="account">
 				<div>
 					<i class="fa fa-user headeri"></i><h4><?php echo $this->language->get('text_witaj'); ?> <span><?php if ($logged) { ?> <?php echo $text_logged; ?> <?php } else { echo $text_welcome; } ?></span></h4>
-					<div class="shadow">						
+					<div>						
 						<div class="rog"></div>
-						<?php if (!$logged) { ?>
-						<div class="butki">
-							<a href="./index.php?route=account/register" class="button action long"><?php echo $this->language->get('text_register'); ?></a>
-							<a href="./index.php?route=account/login" class="button long"><?php echo $this->language->get('text_login'); ?></a>
+							<div class="bg shadow">
+							<?php if (!$logged) { ?>
+							<div class="butki">
+								<a href="./index.php?route=account/register" class="button action long"><?php echo $this->language->get('text_register'); ?></a>
+								<a href="./index.php?route=account/login" class="button long"><?php echo $this->language->get('text_login'); ?></a>
+							</div>
+							<ul>
+								<li><a href="./index.php?route=account/forgotten"><?php echo $this->language->get('text_forgotten'); ?></a></li>
+								<li><a href="./index.php?route=account/address"><?php echo $this->language->get('text_address'); ?></a></li>
+								<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_order'); ?></a></li>
+								<li><a href="./index.php?route=account/return"><?php echo $this->language->get('text_return'); ?></a></li>
+								<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_transaction'); ?></a></li>
+								<li><a href="./index.php?route=account/newsletter"><?php echo $this->language->get('text_newsletter'); ?></a></li>
+							</ul>
+							<?php } else { ?>
+							<ul class="border-bot">
+								<li><a href="./index.php?route=account/edit"><?php echo $this->language->get('text_edit'); ?></a></li>
+								<li><a href="./index.php?route=account/password"><?php echo $this->language->get('text_password'); ?></a></li>
+								<li><a href="./index.php?route=account/address"><?php echo $this->language->get('text_address'); ?></a></li>
+								<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_order'); ?></a></li>
+								<li><a href="./index.php?route=account/return"><?php echo $this->language->get('text_return'); ?></a></li>
+								<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_transaction'); ?></a></li>
+								<li><a href="./index.php?route=account/newsletter"><?php echo $this->language->get('text_newsletter'); ?></a></li>
+							</ul>
+							<div class="butki bot">
+								<a href="./index.php?route=account/logout" class="button long"><?php echo $this->language->get('text_logout'); ?></a>
+							</div>
+							<?php } ?>						
 						</div>
-						<ul>
-							<li><a href="./index.php?route=account/forgotten"><?php echo $this->language->get('text_forgotten'); ?></a></li>
-							<li><a href="./index.php?route=account/address"><?php echo $this->language->get('text_address'); ?></a></li>
-							<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_order'); ?></a></li>
-							<li><a href="./index.php?route=account/return"><?php echo $this->language->get('text_return'); ?></a></li>
-							<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_transaction'); ?></a></li>
-							<li><a href="./index.php?route=account/newsletter"><?php echo $this->language->get('text_newsletter'); ?></a></li>
-						</ul>
-						<?php } else { ?>
-						<ul class="border-bot">
-							<li><a href="./index.php?route=account/edit"><?php echo $this->language->get('text_edit'); ?></a></li>
-							<li><a href="./index.php?route=account/password"><?php echo $this->language->get('text_password'); ?></a></li>
-							<li><a href="./index.php?route=account/address"><?php echo $this->language->get('text_address'); ?></a></li>
-							<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_order'); ?></a></li>
-							<li><a href="./index.php?route=account/return"><?php echo $this->language->get('text_return'); ?></a></li>
-							<li><a href="./index.php?route=account/transaction"><?php echo $this->language->get('text_transaction'); ?></a></li>
-							<li><a href="./index.php?route=account/newsletter"><?php echo $this->language->get('text_newsletter'); ?></a></li>
-						</ul>
-						<div class="butki bot">
-							<a href="./index.php?route=account/logout" class="button long"><?php echo $this->language->get('text_logout'); ?></a>
-						</div>
-						<?php } ?>						
 					</div>
 				</div>
 				</div>
 			  </div>
 			  
 			<?php echo $cart; ?>   
-			
+			<?php } ?>
 			<div class="autowidth">
 				<div class="mobileshow mobilemenu">					
 					<?php if(Utilities::isController('checkout/checkout') || Utilities::isController('checkout/cart')) { } else { ?><a <?php if(Utilities::isController('product/category')) { ?> onClick="jumptomobile();" href="javascript:void(0);" <?php } else { ?> href="http://<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>#menumobile" <?php } ?>><i class="fa fa-bars"></i></a><?php } ?>
@@ -133,13 +128,9 @@
 	  </div>
 	</div>
 </div>
+<?php if(!Utilities::isController('checkout/checkout')) { ?>
 <div id="header-menu">
 	<div class="poziom">
-		<?php if(Utilities::isController('checkout/checkout')) { ?>
-			<div id="menu">
-				&nbsp;
-			</div>
-		<?php } else { ?>
 			<?php if ($categories) { ?>
 			<div id="menu">
 			  <ul>
@@ -166,12 +157,9 @@
 				<?php } */ ?>
 			  </ul>
 			</div>
-			<?php } ?>
 		<?php } ?>
 	</div>
-</div>
-
-<?php if(!Utilities::isController('checkout/checkout')) { ?>
+	</div>
 	<div id="searchmobile" class="mobileshow searchhome">
 		<div>
 			<div class="table"> 

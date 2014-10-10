@@ -57,37 +57,94 @@
 <?php } */?>
 
 <div id="footer">
-<div class="poziom">
-	<div>
-  <?php if ($informations) { ?>
-  <div class="column">
-    <h3><?php echo $text_information; ?></h3>
-    <ul>
-      <?php foreach ($informations as $information) { ?>
-      <li><a href="<?php echo $information['href']; ?>" rel="nofollow"><?php echo $information['title']; ?></a></li>
-      <?php } ?>
-    </ul>
-  </div>
-  <?php } ?>
-  <div class="column">
-    <h3><?php echo $text_service; ?></h3>
-    <ul>
-      <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
-      <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-      <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-    </ul>
-  </div>
-<div class="column">
-	<h3>Facebook</h3>
-</div>
-  <div class="column">
-	<?php echo $language; ?>
-	<?php echo $currency; ?>
-  </div>
+	<div class="poziom">
+		<div>
+		  <?php if ($informations) { ?>
+		  <div class="column">
+			<h3><?php echo $text_information; ?></h3>
+			<ul>
+			  <?php foreach ($informations as $information) { ?>
+			  <li><a href="<?php echo $information['href']; ?>" rel="nofollow"><?php echo $information['title']; ?></a></li>
+			  <?php } ?>
+			</ul>
+		  </div>
+		  <?php } ?>
+		  <div class="column">
+			<h3><?php echo $text_service; ?></h3>
+			<ul>
+			  <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			</ul>
+		  </div>
+			<div class="column">
+			<h3><?php echo $text_service; ?></h3>
+			<ul>
+			  <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			</ul>
+		  </div>
+			<div class="column">
+			<h3><?php echo $text_service; ?></h3>
+			<ul>
+			  <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			  <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+			  <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+			</ul>
+			<ul class="footer-social">
+				<li><i class="fa fa-facebook-square"></i> <a href="#">Facebook</a></li>
+				<li><i class="fa fa-google-plus-square"></i> <a href="#">G+</a></li>
+				<li><i class="fa fa-wordpress"></i> <a href="#">Blog</a></li>
+			</ul>
+		  </div>
+			<div class="column newsletter">
+				<h3>Newsletter</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis rutrum nisi.</p>
+				<ul class="haczki">
+					<li><i class="fa fa-check"></i> Lorem ipsum lorem</li>
+					<li><i class="fa fa-check"></i> Ipsum lorem lor</li>
+					<li><i class="fa fa-check"></i> Loremus ipsumus</li>
+				</ul>
+				<form>
+					<div class="table">
+						<div>
+							<input type="text" placeholder="your@email.com">
+						</div>
+						<div>
+							<input type="submit" value="Anmelden">
+						</div>
+					</div>
+				</form>
+			</div>
+		  <div class="column">
+			<?php echo $language; ?>
+			<?php echo $currency; ?>
+		  </div>
+		</div>
+	</div>
+	<div class="poziom">
+		<div>
+			<div class="table paym">
+				<div><img src="./image/paym-brw/paypal.png" alt="paypal"/></div>
+				<div><img src="./image/paym-brw/sofort.png" alt="sofort"/></div>
+				<div><img src="./image/paym-brw/master.png" alt="master"/></div>
+				<div><img src="./image/paym-brw/visa.png" alt="visa"/></div>
+				<div><img src="./image/paym-brw/dhl.png" alt="dhl"/></div>
+				<div><img src="./image/paym-brw/vorkasse2.png" alt="vorkasse"/></div>
+				<div><img src="./image/paym-brw/klarna1.png" alt="klarna"/></div>
+				<div><img src="./image/paym-brw/klarna3.png" alt="klarna"/></div>
+			</div>
+		</div>
+	</div>
 </div>
 
-</div>
-</div>
 <div id="back-top"></div>
 
 <script src="catalog/view/javascript/jquery/livesearch.js"></script>
@@ -96,11 +153,22 @@
 
 <?php if(Utilities::isController('common/home')) { ?>
 	<script type="text/javascript" src="catalog/view/javascript/jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="catalog/view/javascript/jquery.bxslider.min.js"></script>
 	<script>
 		$('.cycle-slideshow').cycle({
 			next: '.control > .cycle-next',
 			prev: '.control > .cycle-prev',
 			swipe: true
+		});
+		$(document).ready(function(){
+			$('#livesell').bxSlider({
+				slideWidth: 170,
+				minSlides: 5,
+				maxSlides: 5,
+				slideMargin: 10,
+				prevText: '<i class="fa fa-angle-left"></i>',
+				nextText: '<i class="fa fa-angle-right"></i>',
+			});		
 		});
 	</script>
 <?php } ?>
@@ -117,24 +185,25 @@
 
 <script>
 
-    $('#button-cart').bind('click', function() {
+    $('#button-cart').bind('click', function() { 
         $.ajax({
             url: 'index.php?route=checkout/cart/add',
             type: 'post',
-            data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea, input[name="kaucja"]'),
+            // data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea, input[name="kaucja"]'),
+			data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
             dataType: 'json',
-            success: function(json) {
+            success: function(json) { 
                 $('.success, .warning, .attention, information, .error').remove();
 
-                if (json['error']) {
+                if (json['error']) { 
                     if (json['error']['option']) {
                         for (i in json['error']['option']) {
                             // $('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
-							$('#option-' + i).addClass('selecterror');
+							$('#option-' + i).addClass('selecterror'); 
                         }
                     }
                 }
-                if (json['success']) {
+                if (json['success']) { 
 
                     html = cartNotify(json);
 
@@ -171,7 +240,7 @@
 	$(document).ready(function(){
 		resize();
 		focus();
-		$("select").selecter();			
+		$('select').selecter();			
 	});
 	
 	$(window).resize(function(){
@@ -180,16 +249,6 @@
 		},500);
 	});
 	
-	var formy = $('input');
-	
-		formy.on("keyup", function(){
-			if(this.value.length > 3){
-				$(this).addClass('jestok');
-			} else {
-				$(this).removeClass('jestok');
-			}
-		});
-		
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
 			$('#back-top').fadeIn();
@@ -213,6 +272,8 @@
     $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.0/server' });
 </script>
 */?>
+
+</div>
 
 </body>
 </html>

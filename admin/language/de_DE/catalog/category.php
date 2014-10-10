@@ -42,3 +42,23 @@ $_['entry_layout']           = 'Layout überschreiben';
 $_['error_warning']          = 'Erforderliche Daten nicht angegeben, bitte Felder überprüfen.';
 $_['error_permission']       = 'Keine Rechte für diese Aktion!';
 $_['error_name']             = 'Kategoriename muss zwischen 2 und 32 Zeichen lang sein!';
+
+
+$_['text_quantity_discount'] = 'Staffelpreise';
+$_['uzyj_wlasnych_ustawien'] = 'Produkteigene Staffelpreise nutzen (Ja)';
+$_['uzyj_ustawien_kategorii'] = 'Kategorie-Staffelpreise nutzen (Nein)';
+$_['column_from'] = 'Von Stk.';
+$_['column_to'] = 'Bis Stk.';
+$_['text_remove'] = 'Entfernen';
+$_['text_add'] = 'Hinzufügen';
+$_['text_category_name'] = 'Kategorie';
+$_['text_subcategory_name'] = 'Subkategorie';
+$_['text_oryginal_model'] = 'Originale Artikelnr.';
+$_['text_buy_price'] = 'EK / Einkaufspreis';
+$_['dodaj_grupe_atrybutow'] = 'Attributengruppe hinzufügen';
+
+$_['text_filter_type'] = 'Typ des Filters';
+$_['text_filter_name'] = 'Names des Filters';
+$_['text_sort_order'] = 'Reihenfolge';
+$_['text_attribute_or_option_id'] = 'Attribut';
+$_['text_active'] = 'Status';

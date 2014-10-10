@@ -248,7 +248,6 @@ $('#button-register').on('click', function() {
 
 //--></script>
 <div id="payment-address">
-<h2><?php echo $heading_title; ?></h2>
 <h1>1. <?php echo $text_your_details; ?></h1>
 
 <div class="left">
@@ -666,7 +665,15 @@ $('#button-register').on('click', function() {
             <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>" id="<?php echo $payment_method['code']; ?>" checked="checked" />
             <?php } else { ?>
             <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>" id="<?php echo $payment_method['code']; ?>" />
-            <?php } ?><label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?></label>
+            <?php } ?>
+			<label for="<?php echo $payment_method['code']; ?>">
+				<img src="./image/checkout/<?php echo $payment_method['code']; ?>.jpg" alt="<?php echo $payment_method['title']; ?>" /> &nbsp; <?php echo $payment_method['title']; ?>
+				<i class="fa fa-question-circle">
+					<div class="shadow">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, et obcaecati illum consequuntur.
+					</div>
+				</i>
+			</label>
 		</td>
     </tr>
     <?php } ?>
@@ -739,6 +746,46 @@ $('#button-register').on('click', function() {
 <div class="checkout-product">
 <h1>5. <?php echo $this->language->get('text_total'); ?></h1>
 
+	<div id="potwierdzenia">
+
+				<?php if ($text_agree) { ?>
+
+					<div class="right checkbox">
+						<div>							
+							<?php if ($agree) { ?>
+							<input type="checkbox" name="agree" value="1" checked="checked" id="potw1"/>
+							<?php } else { ?>
+							<input type="checkbox" name="agree" value="1" id="potw1"/>
+							<?php } ?>
+							<label for="potw1"><?php echo $text_agree; ?></label>
+						</div>
+					</div>
+					<?/*
+					<div class="right">Die <a href="<?php echo $this->config->get('config_url'); ?>index.php?route=information/information/info&information_id=7" alt="Widerrufsbelehrung" class="colorbox cboxElement"><b>Widerrufsbelehrung</b></a> habe ich zur Kenntnis genommen.
+						<?php if ($agree2) { ?>
+						<input type="checkbox" name="agree2" value="1" checked="checked" id="potw2"/>
+						<?php } else { ?>
+						<input type="checkbox" name="agree2" value="1" id="potw2"/>
+						<?php } ?>	
+					</div>
+					*/?>
+
+				<?php } ?>
+				
+	<div>
+		<div class="checkbox">							
+			<input type="checkbox" name="auto_account_newsletter" value="0" id="chcenewsletter"/><label for="chcenewsletter"><?php echo $this->language->get('text_auto_newsletter'); ?></label>
+		</div>
+	</div>
+
+    <div>
+		<div class="checkbox">							
+			<input type="checkbox" name="auto_account" value="1" checked="checked" id="chcekonto"/><label for="chcekonto"><?php echo $this->language->get('text_auto_account'); ?></label>
+		</div>
+	</div>
+	
+	</div>
+
     <table data-role="table" class="attribute ui-responsive table-stripe" style="margin:0">
         <thead>
         <tr>
@@ -784,52 +831,14 @@ $('#button-register').on('click', function() {
         <?php } ?>
         </tfoot>
     </table>
-	<div id="potwierdzenia">
-	<div class="trust mobilehide absolut"></div>
-				<?php if ($text_agree) { ?>
 
-					<div class="right checkbox">
-						<div>							
-							<?php if ($agree) { ?>
-							<input type="checkbox" name="agree" value="1" checked="checked" id="potw1"/>
-							<?php } else { ?>
-							<input type="checkbox" name="agree" value="1" id="potw1"/>
-							<?php } ?>
-							<label for="potw1"><?php echo $text_agree; ?></label>
-						</div>
-					</div>
-					<?/*
-					<div class="right">Die <a href="<?php echo $this->config->get('config_url'); ?>index.php?route=information/information/info&information_id=7" alt="Widerrufsbelehrung" class="colorbox cboxElement"><b>Widerrufsbelehrung</b></a> habe ich zur Kenntnis genommen.
-						<?php if ($agree2) { ?>
-						<input type="checkbox" name="agree2" value="1" checked="checked" id="potw2"/>
-						<?php } else { ?>
-						<input type="checkbox" name="agree2" value="1" id="potw2"/>
-						<?php } ?>	
-					</div>
-					*/?>
-
-				<?php } ?>
-				
-	<div>
-		<div class="checkbox">							
-			<input type="checkbox" name="auto_account_newsletter" value="0" id="chcenewsletter"/><label for="chcenewsletter"><?php echo $this->language->get('text_auto_newsletter'); ?></label>
-		</div>
-	</div>
-
-    <div>
-		<div class="checkbox">							
-			<input type="checkbox" name="auto_account" value="1" checked="checked" id="chcekonto"/><label for="chcekonto"><?php echo $this->language->get('text_auto_account'); ?></label>
-		</div>
-	</div>
-	
+		
     <div class="buttons">
-        <div class="left">
-            <input type="button" onclick="finalize()"  class="button ultra" value="<?php echo $text_order_confirm ?>"/>
+        <div class="right true">
+              <div class="trust mobilehide" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0"></div> <input type="button" onclick="finalize()"  class="button action" value="<?php echo $text_order_confirm ?>"/>
         </div>
     </div>
-	
-	</div>
-	
+
 </div>
 <div class="payment" style="display:none;"></div>
 <?php } else { ?>

@@ -1015,6 +1015,10 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['product_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
       		$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
     	}
+        else
+        {
+            $product_info = array();
+        }
 
 		$this->data['token'] = $this->session->data['token'];
 		
@@ -1316,7 +1320,22 @@ class ControllerCatalogProduct extends Controller {
 
         $this->data['retailers'] = $this->model_catalog_retailer->getretailers();
 
-		$this->data['product_retailers'] = $this->model_catalog_product->getProductRetailers($this->request->get['product_id']);
+        if(isset($this->request->get['product_id']))
+
+
+
+        if(isset($this->request->get['product_id']))
+        {
+            $this->data['product_retailers'] = $this->model_catalog_product->getProductRetailers($this->request->get['product_id']);
+        }
+        elseif(isset($product_info['product_retailer']))
+        {
+            $this->data['product_retailers'] = $this->model_catalog_product->getProductRetailers($this->request->get['product_id']);
+        }
+        else
+        {
+            $this->data['product_retailers'] = array();
+        }
 
 
 		// Options
@@ -1325,7 +1344,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/option');
 
         $this->data['options'] = $this->model_catalog_option->getOptions();
-		
+
 		if (isset($this->request->post['product_option'])) {
 			$product_options = $this->request->post['product_option'];
 		} elseif (isset($this->request->get['product_id'])) {

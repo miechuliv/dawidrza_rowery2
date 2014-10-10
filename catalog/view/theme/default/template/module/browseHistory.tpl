@@ -36,7 +36,7 @@
 		<div class="price">
 		  <?php if ($products[$j]['price']): ?>
           <?php if (!$products[$j]['special']): ?>
-          <?php echo $products[$j]['price']; ?>
+        <strong>  <?php echo $products[$j]['price']; ?></strong>
           <?php else: ?>
           <?php echo $products[$j]['special']; ?> <span style="color:red; text-decoration:line-through;"><?php echo $products[$j]['price']; ?></span>
           <?php endif ?>

@@ -40,6 +40,23 @@ $_['text_home']               = 'Übersicht';
 $_['text_browse']           = 'Suchen';
 $_['text_clear']            = 'Löschen';
 
+$_['text_grupy_druku'] = 'Druck-Gruppen / Druckkosten';
+$_['text_grupa_druku'] = 'Druck-Gruppe';
+$_['od'] = 'Von';
+$_['do'] = 'Bis';
+$_['cena'] = 'Preis';
+$_['ile_kolorow'] = 'Farbanzahl';
+$_['od_sztuki_czy_ryczalt'] = 'Preis pro Stk. (Ja)<br/>Pauschale (Nein)';
+$_['text_remove_grupa_druku'] = ' Löschen';
+$_['text_add_podgrupa_druku'] = ' Sub-Druckgruppe hinzufügen';
+$_['text_add_grupa_druku'] = ' Haupt-Druckgruppe hinzufügen';
+
+$_['grupy_producentow'] = 'Produzenten';
+$_['dostawcy'] = 'Zulieferer';
+$_['porownywarki_cen'] = 'Preissuchmaschinen';
+
+$_['tab_extended_filter'] = 'Filter in dieser Kategorie';
+
 // Button
 $_['button_insert']           = 'Neu';
 $_['button_delete']           = 'Löschen';

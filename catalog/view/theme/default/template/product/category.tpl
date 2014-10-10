@@ -1,5 +1,5 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
+<div id="content" class="bord"><?php echo $content_top; ?>
     <div class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
         <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
@@ -111,11 +111,11 @@
         <?php /* echo $product['price']; */ ?>
 		
 		        <?php if ($product['tax']) { ?>
-        <?php echo $text_tax; ?> <?php echo $product['tax']; ?> netto
+        <?php // echo $text_tax; ?> <?php echo $product['tax']; ?>
         <?php } ?>
          
         <?php } else { ?>
-       <span class="price-new">ab <?php echo $product['special']; ?> netto</span> <span class="price-old"><?php echo $product['price']; ?></span> 
+       <span class="price-new"><?php echo $product['special']; ?> netto</span> <span class="price-old"><?php echo $product['price']; ?></span> 
         <?php } ?>
 
       </div>

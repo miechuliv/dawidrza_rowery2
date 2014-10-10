@@ -60,16 +60,16 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_model; ?>"><?php echo $column_model; ?></a>
                     <?php } ?></td>                
-					<td class="left">Stan magazynowy</td>
-              <td class="left">Kategoria</td>
-              <td class="left">Rodzaj produktu: </td>
+					<td class="left"><?php echo $this->language->get('stan_magazynowy'); ?></td>
+              <td class="left"><?php echo $this->language->get('kategoria'); ?></td>
+            <?/*  <td class="left"><?php echo $this->language->get('rodzaj_produktu'); ?></td>*/?>
                 <td class="left"><?php if ($sort == 'p.status') { ?>
                 <a href="<?php echo $sort_status; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_status; ?></a>
                 <?php } else { ?>
                 <a href="<?php echo $sort_status; ?>"><?php echo $column_status; ?></a>
                 <?php } ?></td>
 
-                <td class="left">Akcja</td>
+                <td class="left"></td>
             </tr>
           </thead>
           <tbody>
@@ -89,7 +89,7 @@
                         <?php } ?>
                     </select>
                 </td>
-                <td align="right">
+               <?/* <td align="right">
 
 
                     <select style="display: none" name="retailer" class="mass">
@@ -102,7 +102,7 @@
                     </select>
 
 
-                </td>
+                </td>*/?>
                 <td><select name="filter_status" class="mass">
                   <option value="*"></option>
                   <?php if ($filter_status) { ?>
@@ -123,7 +123,7 @@
             <!-- dodatkowe wyszukiwanie np: opcje, atrybuty -->
             <tr>
                 <td colspan="10" onclick="showDodatkowe()">
-                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> Dodatkowe parametry wyszukiwania</span></a>
+                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> <?php echo $this->language->get('dodatkowe_parametry_wyszukiwania'); ?></span></a>
                 </td>
             </tr>
             <tr style="display:none;" id="dodatkowe-wyszukiwanie">
@@ -132,10 +132,10 @@
 					<thead>
                         <tr class="filter">
                             <!-- nagłówkie -->
-                            <td class="left">Wyszukiwanie po opcji:</td>
-                            <td class="left">Wartość:</td>
-                            <td class="left">Wyszukiwanie po atrybucie:</td>
-                            <td class="left">Wartość:</td>
+                            <td class="left"><?php echo $this->language->get('wyszukiwanie_po_opcji'); ?></td>
+                            <td class="left"><?php echo $this->language->get('wyszukiwanie_po_wartosci'); ?></td>
+                            <td class="left"><?php echo $this->language->get('wyszukiwanie_po_atrybucie'); ?></td>
+                            <td class="left"><?php echo $this->language->get('wartosc'); ?></td>
                         </tr>
 					</thead>
 					<tbody>
@@ -227,7 +227,7 @@
 
             <tr>
                 <td colspan="10" onclick="showMassEdit()">
-                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> Pokaż panel masowej edycji</span></a>
+                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> <?php echo $this->language->get('pokaz_panel_masowej_edycji'); ?></span></a>
                 </td>
             </tr>
             <!-- masowa edycja -->
@@ -238,27 +238,27 @@
                         <tr class="filter">
                
                             <td class="left">
-                                Cena
+                                <?php echo $this->language->get('cena'); ?>
                             </td>
                             <td class="left">
-                                Cena procentowo (+/-)
+                                <?php echo $this->language->get('cena_procentowo'); ?>
                             </td">
 
                             <td class="left">
-                                Czas dostawy (dni)
+                                <?php echo $this->language->get('czas_dostawy'); ?>
                             </td>
                             <td class="left">
-                                Koszt dostawy
+                                <?php echo $this->language->get('koszt_dostawy'); ?>
                             </td>
 
                             <td class="left">
-                                Stan magazynowy
+                                <?php echo $this->language->get('stan_magazynowy'); ?>
                             </td>
-                            <td class="left" >Czy ma pojawiać się w porównywarkach np: Nokaut.pl?</td>
-                            <td  class="left">Dodaj do kategorii</td>
-                            <td  class="left">Usuń z kategorii</td>
+                            <td class="left" ><!--Czy ma pojawiać się w porównywarkach np: Nokaut.pl?--></td>
+                            <td  class="left"><?php echo $this->language->get('dodaj_do_kategorii'); ?></td>
+                            <td  class="left"><?php echo $this->language->get('usun_z_kategorii'); ?></td>
                             <td class="left">
-                                Dodaj / usuń z Google Merchant
+                                <?php echo $this->language->get('dodaj_usun_google_merchant'); ?>
                             </td>
                             <td>
 
@@ -290,8 +290,8 @@
                             <td class="left">
                                 <select name="mass_feed" class="mass">
                                     <option></option>
-                                    <option value="1" >Tak</option>
-                                    <option value="0" >Nie</option>
+                                    <option value="1" ><?php echo $this->language->get('tak'); ?></option>
+                                    <option value="0" ><?php echo $this->language->get('nie'); ?></option>
                                 </select>
                             </td>
 
@@ -315,14 +315,14 @@
                             <td class="left">
                                 <select name="mass_google_merchant" class="mass">
                                     <option></option>
-                                    <option value="1">Dodaj</option>
-                                    <option value="2">Uaktualnij</option>
-                                    <option value="0">Usuń</option>
+                                    <option value="1"><?php echo $this->language->get('dodaj'); ?></option>
+                                    <option value="2"><?php echo $this->language->get('uaktualnij'); ?></option>
+                                    <option value="0"><?php echo $this->language->get('usun'); ?></option>
                                 </select>
                             </td>
 
                             <td class="right">
-                                <a onclick="filter(true);" class="button ">Zapisz</a>
+                                <a onclick="filter(true);" class="button "><?php echo $this->language->get('zapisz'); ?></a>
                             </td>
                         </tr>
 					</tbody>
@@ -332,7 +332,7 @@
 
             <tr>
                 <td colspan="10" onclick="showMassSpecial()">
-                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> Dodaj masową promocję</span></a>
+                    <a class="button gr" ><span><i class="fa fa-plus-square-o"></i> <?php echo $this->language->get('dodaj_masowa_promocje'); ?></span></a>
                 </td>
             </tr>
             <tr style="display:none;" id="mass-special">
@@ -345,8 +345,8 @@
                             <td class="left"><?php echo $entry_price; ?></td>
                             <td class="left"><?php echo $entry_date_start; ?></td>
                             <td class="left"><?php echo $entry_date_end; ?></td>
-                            <td class="left"><a onclick="saveMassSpecial();" class="button">Zapisz</a>
-                                <a onclick="saveDeleteSpecial();" class="button">Usuń wszystkie promocje dla wybranych</a></td>
+                            <td class="left"><a onclick="saveMassSpecial();" class="button"><?php echo $this->language->get('zapisz'); ?></a>
+                                <a onclick="saveDeleteSpecial();" class="button"><?php echo $this->language->get('usun_wszystkie_promocje_dla_wybranych'); ?></a></td>
                         </tr>
                         </thead>
                         <?php $special_row = 0; ?>

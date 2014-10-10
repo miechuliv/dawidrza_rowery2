@@ -332,6 +332,7 @@
                 <tr>
                     <td class="left"><?php echo $column_product; ?></td>
                     <td class="left"><?php echo $column_model; ?></td>
+                    <td class="left">Dostawca</td>
                     <td class="right"><?php echo $column_quantity; ?></td>
                     <td class="right"><?php echo $column_price; ?></td>
                     <td class="right"><?php echo $column_total; ?></td>
@@ -351,6 +352,7 @@
                         <?php } ?>
 
                     <td class="left"><?php echo $product['model']; ?></td>
+                    <td class="left"><?php echo $product['retailer']; ?></td>
                     <td class="right"><?php echo $product['quantity']; ?></td>
                     <td class="right"><?php echo $product['price']; ?></td>
                     <td class="right"><?php echo $product['total']; ?></td>

@@ -12,6 +12,43 @@ $_['entry_list_price']			= 'Listenpreis (UVP)';
 $_['entry_packaging_unit']		= 'Verpackungseinheit (VE)';
 $_['entry_show_stock']			= 'Zeige Lagerstand<span class="help">Einstellung hat Vorrang gegenüber der Systemsteuerung</span>';
 
+$_['stan_magazynowy'] = 'Auf Lager';
+$_['kategoria'] = 'Kategorie';
+$_['rodzaj_produktu'] = 'Produkttyp:';
+$_['status'] = 'Status';
+$_['dodatkowe_parametry_wyszukiwania'] = 'Zusätzliche Suchparameter';
+$_['wyszukiwanie_po_opcji'] = 'Suche nach Farbe, Farbanzahl, Veredlung:';
+$_['wartosc'] = 'Auswahl';
+$_['wyszukiwanie_po_atrybucie'] = 'Suche nach Attributen:';
+$_['pokaz_panel_masowej_edycji'] = 'Bulk edit';
+$_['cena'] = 'Preis';
+$_['cena_procentowo'] = 'Preis in % ändern +/-';
+$_['czas_dostawy'] = 'Lieferzeit';
+$_['koszt_dostawy'] = 'Versandkosten';
+$_['dodaj_do_kategorii'] = 'Zur Kategorie hinzufügen';
+$_['usun_z_kategorii'] = 'Aus Kategorie Löschen';
+$_['dodaj_usun_google_merchant'] = 'Google Merchant Aktivieren/Deaktivieren';
+$_['dodaj_masowa_promocje'] = 'Bulk promotion';
+$_['procent_znizki'] = 'Rabatt in % Prozent';
+$_['usun_wszystkie_promocje_dla_wybranych'] = 'Angebote/Rabatte für ausgewählte Produkte löschen';
+$_['zapisz'] = 'Speichern';
+$_['tak'] = 'Ja';
+$_['nie'] = 'Nein';
+
+$_['text_quantity_discount'] = 'Staffelpreise';
+$_['uzyj_wlasnych_ustawien'] = 'Produkteigene Staffelpreise nutzen (Ja)';
+$_['uzyj_ustawien_kategorii'] = 'Kategorie-Staffelpreise nutzen (Nein)';
+$_['column_from'] = 'Von Stk.';
+$_['column_to'] = 'Bis Stk.';
+$_['text_remove'] = 'Entfernen';
+$_['text_add'] = 'Hinzufügen';
+$_['text_category_name'] = 'Kategorie';
+$_['text_subcategory_name'] = 'Subkategorie';
+$_['text_oryginal_model'] = 'Originale Artikelnr.';
+$_['text_buy_price'] = 'EK / Einkaufspreis';
+$_['dodaj_grupe_atrybutow'] = 'Attributengruppe hinzufügen';
+$_['wyszukiwanie_po_wartosci'] = 'Auswahl:';
+
 // Heading
 $_['heading_title']             = 'Produkte';
 

@@ -258,6 +258,7 @@
                 <td></td>
                 <td class="left"><?php echo $column_product; ?></td>
                 <td class="left"><?php echo $column_model; ?></td>
+                  <td class="left">Dostawca</td>
                 <td class="right"><?php echo $column_quantity; ?></td>
                 <td class="right"><?php echo $column_price; ?></td>
                 <td class="right"><?php echo $column_total; ?></td>
@@ -295,6 +296,8 @@
                   <?php } ?></td>
                 <td class="left"><?php echo $order_product['model']; ?>
                   <input type="hidden" name="order_product[<?php echo $product_row; ?>][model]" value="<?php echo $order_product['model']; ?>" /></td>
+                  <td class="left"><?php echo $order_product['retailer']; ?>
+                      <input type="hidden" name="order_product[<?php echo $product_row; ?>][retailer]" value="<?php echo $order_product['retailer']; ?>" /></td>
                 <td class="right"><?php echo $order_product['quantity']; ?>
                   <input type="hidden" name="order_product[<?php echo $product_row; ?>][quantity]" value="<?php echo $order_product['quantity']; ?>" /></td>                 
                 <td class="right"><?php echo $order_product['price']; ?>
@@ -859,7 +862,8 @@ $('input[name=\'product\']').autocomplete({
 						value: item.product_id,
 						model: item.model,
 						option: item.option,
-						price: item.price
+						price: item.price,
+                        retailer: item.retailer
 					}
 				}));
 			}
@@ -1405,7 +1409,8 @@ $('#button-product, #button-voucher, #button-update').live('click', function() {
 					
 					html += '  </td>';
 					html += '  <td class="left">' + product['model'] + '<input type="hidden" name="order_product[' + product_row + '][model]" value="' + product['model'] + '" /></td>';
-					html += '  <td class="right">' + product['quantity'] + '<input type="hidden" name="order_product[' + product_row + '][quantity]" value="' + product['quantity'] + '" /></td>';
+					html += '  <ts class="left">' + product['retailer'] + '<input type="hidden" name="order_product[' + product_row + '][retailer]" value="' + product['retailer'] + '" /></td>';
+                    html += '  <td class="right">' + product['quantity'] + '<input type="hidden" name="order_product[' + product_row + '][quantity]" value="' + product['quantity'] + '" /></td>';
 					html += '  <td class="right">' + product['price'] + '<input type="hidden" name="order_product[' + product_row + '][price]" value="' + product['price'] + '" /></td>';
 					html += '  <td class="right">' + product['total'] + '<input type="hidden" name="order_product[' + product_row + '][total]" value="' + product['total'] + '" /><input type="hidden" name="order_product[' + product_row + '][tax]" value="' + product['tax'] + '" /><input type="hidden" name="order_product[' + product_row + '][reward]" value="' + product['reward'] + '" /></td>';
 					html += '</tr>';
@@ -1485,6 +1490,7 @@ $('#button-product, #button-voucher, #button-update').live('click', function() {
 						
 						html += '  </td>';
 						html += '  <td class="left">' + product['model'] + '</td>';
+                        html += '  <td class="left">' + product['retailer'] + '</td>';
 						html += '  <td class="right">' + product['quantity'] + '</td>';
 						html += '  <td class="right">' + product['price'] + '</td>';
 						html += '  <td class="right">' + product['total'] + '</td>';

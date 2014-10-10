@@ -72,6 +72,13 @@
                 <?php } ?></td>
             </tr>
 
+
+            <tr>
+                <td><span class="required"></span> Frontend model </td>
+                <td><input type="text" name="frontend_model" value="<?php echo $frontend_model; ?>" />
+                   </td>
+            </tr>
+
             <tr>
                 <td><?php echo $this->language->get('text_category_name'); ?></td>
                 <td><input type="text" name="category_name" value="<?php echo $category_name; ?>" /></td>
@@ -338,16 +345,16 @@
           </table>
         </div>
         <div id="tab-quantity-discount" style="display: none;">
-            <div>
-                <label for="use_own_quantity_discount">Uzyj swoich własnych ustawień ( TAK ) , uzyj ustawień kategorii ( NIE )</label>
+            <div style="padding:10px">
+                <label for="use_own_quantity_discount"><?php echo $this->language->get('uzyj_wlasnych_ustawien'); ?>, <?php echo $this->language->get('uzyj_ustawien_kategorii'); ?></label>
                 <select  name="use_own_quantity_discount" >
 
-                        <option value="1" <?php if($use_own_quantity_discount){ echo 'selected="selected"'; } ?> >Tak</option>
-                        <option value="0" <?php if(!$use_own_quantity_discount){ echo 'selected="selected"'; } ?> >Nie</option>
+                        <option value="1" <?php if($use_own_quantity_discount){ echo 'selected="selected"'; } ?> ><?php echo $this->language->get('tak'); ?></option>
+                        <option value="0" <?php if(!$use_own_quantity_discount){ echo 'selected="selected"'; } ?> ><?php echo $this->language->get('nie'); ?></option>
                     </select>
             </div>
 
-            <table>
+            <table style="margin:10px">
                 <thead>
                 <tr>
                     <td><?php echo $this->language->get('column_from'); ?></td>
@@ -543,12 +550,14 @@
 
             <thead>
             <tr colspan="3">
-                <select id="at_group" style="margin:10px auto; padding:10px;">
-                    <option value="NULL">Dodaj grupę atrybutów</option>
-                    <?php foreach($attribute_groups as $atg){ ?>
-                    <option value="<?php echo $atg['attribute_group_id']; ?>" ><?php echo $atg['name']; ?></option>
-                    <?php } ?>
-                </select>
+				<td>
+					<select id="at_group" style="margin:10px auto; padding:10px;">
+						<option value="NULL"><?php echo $this->language->get('dodaj_grupe_atrybutow'); ?></option>
+						<?php foreach($attribute_groups as $atg){ ?>
+						<option value="<?php echo $atg['attribute_group_id']; ?>" ><?php echo $atg['name']; ?></option>
+						<?php } ?>
+					</select>
+				</td>
             </tr>
               <tr>
                 <td class="left"><?php echo $entry_attribute; ?></td>
@@ -673,8 +682,8 @@
               <tbody id="option-value-row<?php echo $option_value_row; ?>">
                 <tr>
                   <td class="left">
-
-                      Kod na froncie: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][model]" value="<?php echo $product_option_value['model']; ?>" /><br/>
+                      Kod na froncie: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][frontend_model]" value="<?php echo $product_option_value['frontend_model']; ?>" /><br/>
+                      Kod: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][model]" value="<?php echo $product_option_value['model']; ?>" /><br/>
                       Oryginalny kod: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][original_model]" value="<?php echo $product_option_value['original_model']; ?>" /><br/>
                       <select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]">
                       <?php if (isset($option_values[$product_option['option_id']])) { ?>
@@ -1421,7 +1430,8 @@ function addOptionValue(option_row) {
 	html  = '<tbody id="option-value-row' + option_value_row + '">';
 	html += '  <tr>';
 	html += '    <td class="left">';
-    html += 'Kod na froncie: <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][model]"  /><br/>';
+    html += 'Kod na froncie: <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][frontend_model]"  /><br/>';
+    html += 'Kod: <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][model]"  /><br/>';
     html += 'Oryginalny kod: <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][original_model]"  /><br/>';
     html += '<select name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][option_value_id]">';
 	html += $('#option-values' + option_row).html();
