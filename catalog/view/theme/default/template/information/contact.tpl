@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<div id="content"><?php echo $content_top; ?>
+<div id="content" style="width:100%"><?php echo $content_top; ?>
 <?/*
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>

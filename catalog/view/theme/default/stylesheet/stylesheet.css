@@ -6,8 +6,10 @@ body > div {display:block; width:100%;}
 body > div > .poziom {width:960px; margin:auto; display:block; position:relative; clear:both;}
 a img {border:0;}
 
+table {border-collapse: collapse;	border-spacing: 0;}
+
 a,
-a:visited {text-decoration:none; color:#000;}
+a:visited {text-decoration:none; color:#1a0dab;}
 a:hover {text-decoration:underline !important;}
 a.select-target:hover {text-decoration:none !important;}
 h1,h3,h4 {padding:0; margin:0;}
@@ -60,11 +62,11 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 .radio label:before {border-radius: 100%;}
 .radio input[type=radio]:checked + label:before {content: "\2022"; color: #fff; font-size: 27px; font-weight:normal; text-align: center; line-height: 21px; background:#55b310; -webkit-text-stroke: 1px;}
 
-.checkbox label {display: inline-block; position: relative; padding-left: 30px; line-height:22px; cursor:pointer; }
+.checkbox label {display: inline-block; position: relative; padding-left: 30px; line-height:22px; cursor:pointer; margin:2px 0;}
 .checkbox label a:after {content: " \21F2";}
 .checkbox input[type=checkbox] {display: none;}
-.checkbox label:before {content: ""; border-radius: 3px; background-color: #ddd; box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .3); width:20px; height:20px; display: inline-block; position: absolute; left: 0; bottom: 1px;}
-.checkbox input[type=checkbox]:checked + label:before {content: "\2713"; text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); font-size: 15px; color: #fff; background:#55b310; text-align: center; line-height: 20px; -webkit-text-stroke: 1px;}
+.checkbox label:before {content: ""; border-radius: 3px; background-color: #fff; border:1px solid #ccc; width:20px; height:20px; display: inline-block; position: absolute; left: 0; bottom: 1px;}
+.checkbox input[type=checkbox]:checked + label:before {content: "\2713"; font-size: 15px; color: #000; text-align: center; line-height: 20px; -webkit-text-stroke: 1px;}
 .checkbox.grey input[type=checkbox]:checked + label:before {content: "\2713"; text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); font-size: 15px; color: #fff; background:#ddd; text-align: center; line-height: 20px; -webkit-text-stroke: 1px;}
 
 .select-theme-default {width:200px !important; }
@@ -78,8 +80,13 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 .button.cta {padding:20px 0; text-align:center; margin:10px auto 0; color:#fff !important; background:#ff690b; text-shadow:1px 1px 0 #ff690b; font-size:20px; font-weight:bold; display:block; width:98%}
 .button.cta:hover {background:#fb5f00;}
 .button.cta > img {margin-bottom:-3px;}
-.button.action {background:#ff690b; text-shadow:1px 1px 0 #ff690b; font-weight:bold; color:#fff !important;}
-.button.action:hover {background:#FF7825;}
+.button.action {background:#FF8001; text-shadow:#ff690b; font-weight:bold; color:#fff !important;}
+.button.action:hover {background:#F67B00;}
+.button.cart {border-radius:4px; border:0; overflow:hidden; background:#FF8001; padding:0; color:#fff !important; display:table; width:100%; margin:10px 0;}
+.button.cart i {background:#F67B00; line-height:55px; height:55px; padding:0 20px; font-size:25px; display:table-cell; vertical-align:top;}
+.button.cart span {line-height:55px; height:55px; padding:0 20px; font-size:18px; font-weight:bold; display:table-cell; vertical-align:top; text-align:center; width:100%; text-shadow:#ff690b;}
+.button.cart:hover {background:#F67B00;}
+.button.cart:hover i {background:#EC7600; }
 
 .button.long {
   border: medium none !important;
@@ -191,14 +198,14 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 #header-menu ul {list-style-type:none; margin:0; padding:0; display:table; width:100%;}
 #header-menu ul li {display:inline; position:relative; display:table-cell; border:1px solid #eee; border-left:0; vertical-align:top; text-align:center;}
 #header-menu ul li:first-child {border-left:1px solid #eee;}
-#header-menu ul li a {padding:10px 0; display:block;}
+#header-menu ul li a {padding:10px 0; display:block; color:#000}
 #header-menu ul li > div {display:none; position:absolute; left:0;}
 #header-menu ul li:hover > div {display:block;}
 
 /* LEFT COLUMN */
 
 .box .box-heading {font-weight:bold;}
-.box ul {list-style-type:none; padding:0;}
+.box ul {list-style-type:none; padding:0; margin:10px 0}
 
 /* HOME */
 
@@ -213,6 +220,7 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 .home-con h2 {font-size:16px; margin:0}
 .home-con h2 a.alle {font-size:10px; font-weight:normal}
 .home-con.top .leftmenu {min-height:490px}
+.home-con.top .leftmenu h2 a {color:#000}
 .home-con .leftmenu ul {margin:0 0 20px}
 .home-con .leftmenu > div:last-child ul {margin:0}
 .home-con h3 {width:100%; text-align:center; margin:0 0 20px}
@@ -286,9 +294,10 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 
 #niehome #container > .poziom {padding:19px 0;}
 #niehome #container > .poziom  > div {display:table-cell; vertical-align:top;}
-#niehome #container > .poziom  > #column-left {width:150px;}
+#niehome #container > .poziom  > #column-left {width:190px;}
 #niehome #container > .poziom  > #content.bord {border-left:1px solid #eee;}
-.product-list > div {float:left; width:33.3333%; text-align:center; padding:0 0 15px;}
+.product-list > div {float:left; width:33.3333%; text-align:center; padding:0 0 50px;}
+.product-list > div .prod {width:100%; max-width:125px; margin:auto}
 .product-list > div .price {font-weight:900; display:block; width:100%; margin:5px 0; font-size:20px;}
 .s_module_content .product-list > div {width:25%;}
 
@@ -317,13 +326,14 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 #product-title small,
 #product-price small {font-size:12px; font-weight:normal}
 #product-producent {text-align:center}
-#product-price {text-align:center; font-size:30px; font-weight:bold; padding:0 0 10px;}
+#product-producent img {max-width:200px}
+#product-price {text-align:center; font-size:30px; font-weight:bold; padding:0 0 5px;}
 #product-price small {width:100%; display:block}
 #product-rating {width:100%; text-align:center; padding:0 0 10px}
 
 #content.block {width:100%;}
 
-#rating {margin:5px 0 0}
+#rating {margin:0 0 5px}
 
 #rating > label {
   background: url("../image/stars-select.png") no-repeat scroll right top rgba(0, 0, 0, 0);
@@ -464,7 +474,9 @@ form select {padding:10px; border:1px solid #ddd; width:87%; border-radius:3px;}
 
 .box-content div > h2 {margin:10px 0 !important; font-size:14px}
 .filter-price > div {display:inline-block;}
-.filter-price > div > input {width:30px; text-align:center}
+.filter-price > div > input {width:30px; padding:3px; text-align:center; margin:2px 0;}
+
+.mobilehide > label {display:inline-block;}
 
 .zalety {margin:0 5px}
 .zalety li {background:url(../img/ok2.gif) no-repeat left center; padding:2px 0 2px 25px; color:#55b310}

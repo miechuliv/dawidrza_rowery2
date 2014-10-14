@@ -179,4 +179,4 @@
 <div id="notification"></div>
     <div id="translateBox"></div>
 
-<div class="poziom" style="position:relative;">
+<div class="poziom" style="position:relative; <?php if(Utilities::isController('checkout/cart') || Utilities::isController('checkout/checkout')) { ?>padding:0;<?php } ?>">

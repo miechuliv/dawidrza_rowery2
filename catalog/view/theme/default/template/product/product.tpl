@@ -76,11 +76,11 @@
 			
 			<?php if(!$rating=='0'){ ?>
 				<div id="product-rating">
-					<img src="catalog/view/theme/default/image/bigstar-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" /> <small style="font-weight:normal;font-size:11px;">(<?php echo $reviews; ?>)</small>
+					<img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" /> <small style="font-weight:normal;font-size:11px;">(<?php echo $reviews; ?>)</small>
 				</div>
 			<?php } /* usunac -> */ else { ?>
 				<div id="product-rating">
-					<img src="catalog/view/theme/default/image/bigstar-4.png" alt="<?php echo $reviews; ?>" /><br/> <small style="font-weight:normal;font-size:11px;">(1<?php echo $reviews; ?>)</small>
+					<img src="catalog/view/theme/default/image/stars-4.png" alt="<?php echo $reviews; ?>" /><br/> <small style="font-weight:normal;font-size:11px;">(1<?php echo $reviews; ?>)</small>
 				</div>
 			<?php } ?>
 
@@ -235,21 +235,7 @@
 			<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 		</table>
 
-
-
-			<?php /* if ($points) { ?>
-			<span class="reward"><small><?php echo $text_points; ?> <?php echo $points; ?></small></span> <br />
-			<?php } ?>
-			<?php if ($discounts) { ?>
-			<br />
-			<div class="discount">
-			  <?php foreach ($discounts as $discount) { ?>
-			  <?php echo sprintf($text_discount, $discount['quantity'], $discount['price']); ?><br />
-			  <?php } ?>
-			</div>
-			<?php } */ ?>
-			
-		<a id="button-cart" class="button cta"><span><?php echo $button_cart; ?> <i class="fa fa-shopping-cart"></i></span></a>
+		<a id="button-cart" class="button cart"><i class="fa fa-shopping-cart"></i> <span><?php echo $button_cart; ?></span></a>
 		
 		<div id="product-moreinfo">
 			<div class="table">
@@ -269,14 +255,6 @@
 	  </div>
 	
 	</div>
-		  
-
-	
-		 <?/*
-        <div><span>&nbsp;&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;&nbsp;</span></div>
-        <div><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br />
-          <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></div>
-		 */?>
 		 
         <?php if ($minimum > 1) { ?>
         <div class="minimum"><?php echo $text_minimum; ?></div>
@@ -290,37 +268,6 @@
 	 	<li>Lorem ipsum dolor sit amet</li>
 	  </ul>
 	  
-
-      <?php /* if ($review_status) { ?>
-      <div class="review">
-        <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
-        <div class="share"><!-- AddThis Button BEGIN -->
-          <div class="addthis_default_style"><a class="addthis_button_compact"><?php echo $text_share; ?></a> <a class="addthis_button_email"></a><a class="addthis_button_print"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a></div>
-          <script src="http://s7.addthis.com/js/250/addthis_widget.js"></script> 
-          <!-- AddThis Button END --> 
-        </div>
-      </div>
-      <?php } */ ?>
-	  
-	  <?/*
-	<div>
-		<div id="block3">
-			<div class="table">
-				<div><i class="fa fa-truck"></i></div>
-				<div><?php echo $this->language->get('box_truck'); ?></div>
-			</div>
-			<div class="table">
-				<div><i class="fa fa-clock-o"></i></div>
-				<div><?php echo $this->language->get('box_time'); ?></div>
-			</div>
-			<div class="table">
-				<div><i class="fa fa-phone"></i></div>
-				<div><?php echo $this->language->get('box_contact'); ?></div>
-			</div>
-		</div>
-	</div>
-*/?>
-
    </div> 
 </div>
 
@@ -411,62 +358,6 @@
 			</div>
 		</div>
 	</div>
-	
-<?/*	
-	<div>
-		<h3><?php echo $this->language->get('text_cennik'); ?></h3>
-			<table data-role="table" class="attribute ui-responsive table-stripe" style="margin:0">
-              <thead>
-              <tr>			  
-				<th class="autowidth"><?php echo $this->language->get('text_from'); ?></th>
-				<?php foreach($product_quantity_discount as $discount){ ?>
-					<th scope="col"><?php echo $discount['from']; ?></th>
-				<?php } ?>				
-              </tr>
-              </thead>
-              <tbody>
-				  <?php for($i=1;$i<=$l_kolorow;$i++){ ?>															
-					<tr>
-						<th scope="row"><?php echo $this->language->get('text_print').' '.$i; ?> </th>
-						<?php foreach($product_quantity_discount as $discount){ ?>
-							<td><?php echo $discount['druk'][$i] ; ?></td>
-						<?php }  ?>
-					</tr>						 	
-				 <?php } ?>
-              </tbody>
-          </table>            
-	</div>
-	
-	<?/* POPRZEDNIA TABELA
-	<div>
-		<h3><?php echo $this->language->get('text_cennik'); ?></h3>
-          <table class="attribute" style="margin:0">
-              <thead>
-              <tr>
-                  <td class="autowidth"><?php echo $this->language->get('text_from'); ?></td>
-                  <td><?php echo $this->language->get('text_percent'); ?></td>
-                  <?php if($l_kolorow){ ?>
-                    <?php for($i=1;$i<=$l_kolorow;$i++){ ?>
-                      <td><?php echo $this->language->get('text_print').' '.$i; ?> </td>
-                    <?php } ?>
-                  <?php } ?>
-
-              </tr>
-              </thead>
-              <tbody>
-              <?php foreach($product_quantity_discount as $discount){ ?>
-              <tr>
-                  <td><?php echo $discount['from']; ?></td>
-                  <td><?php echo $discount['percent']; ?></td>
-				  <?php foreach($discount['druk'] as $druk){ ?>
-                    <td><?php echo $druk; ?></td>
-                  <?php } ?>
-              </tr>
-              <?php } ?>
-              </tbody>
-          </table>      
-	</div>
-	*/?>
 	
   <?php if ($products) { ?>
   <div id="tab-related" class="tab-content">
@@ -611,19 +502,19 @@
 	</div>
 	<h2>Bework das Produkt</h2>
 	<form action="" class="bework">
-		<input type="text" placeholder="Titel lorem ipsum">
 		<div id="rating">	
-		<b><?php echo $entry_rating; ?></b>
-		<label for="ocena1"></label><input type="radio" name="rating" value="1" id="ocena1"/>
-		&nbsp;
-		<label for="ocena2"></label><input type="radio" name="rating" value="2" id="ocena2" />
-		&nbsp;
-		<label for="ocena3"></label><input type="radio" name="rating" value="3" id="ocena3"/>
-		&nbsp;
-		<label for="ocena4"></label><input type="radio" name="rating" value="4" id="ocena4"/>
-		&nbsp;
-		<label for="ocena5"></label><input type="radio" name="rating" value="5" id="ocena5"/>
+			<b><?php echo $entry_rating; ?></b>
+			<label for="ocena1"></label><input type="radio" name="rating" value="1" id="ocena1"/>
+			&nbsp;
+			<label for="ocena2"></label><input type="radio" name="rating" value="2" id="ocena2" />
+			&nbsp;
+			<label for="ocena3"></label><input type="radio" name="rating" value="3" id="ocena3"/>
+			&nbsp;
+			<label for="ocena4"></label><input type="radio" name="rating" value="4" id="ocena4"/>
+			&nbsp;
+			<label for="ocena5"></label><input type="radio" name="rating" value="5" id="ocena5"/>
 		</div>
+		<input type="text" placeholder="Titel lorem ipsum">
 		<textarea style="width:40%" rows="10" id="opin">Die lorem ipsum lorem details</textarea>
 		<input type="submit" class="button action" value="Lorem ipsum submit">
 	</form>

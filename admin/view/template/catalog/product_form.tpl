@@ -75,7 +75,7 @@
 
             <tr>
                 <td><span class="required"></span> Frontend model </td>
-                <td><input type="text" name="frontend_model" value="<?php echo $frontend_model; ?>" />
+                <td><input type="text" name="frontend_model" value="<?php // echo $frontend_model; ?>" />
                    </td>
             </tr>
 
@@ -682,7 +682,7 @@
               <tbody id="option-value-row<?php echo $option_value_row; ?>">
                 <tr>
                   <td class="left">
-                      Kod na froncie: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][frontend_model]" value="<?php echo $product_option_value['frontend_model']; ?>" /><br/>
+                    <?/*  Kod na froncie: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][frontend_model]" value="<?php echo $product_option_value['frontend_model']; ?>" /><br/>*/?>
                       Kod: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][model]" value="<?php echo $product_option_value['model']; ?>" /><br/>
                       Oryginalny kod: <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][original_model]" value="<?php echo $product_option_value['original_model']; ?>" /><br/>
                       <select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]">

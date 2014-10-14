@@ -209,3 +209,6 @@
 2014-10-09 10:04:32 - <b>Notice</b>: Undefined index: product_id in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/module/browseHistory.php</b> on line <b>35</b>
 2014-10-09 16:53:43 - <b>Notice</b>: Undefined index: druk in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/product/product.php</b> on line <b>1077</b>
 2014-10-09 16:53:44 - <b>Notice</b>: Undefined index: druk in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/product/product.php</b> on line <b>1077</b>
+2014-10-13 10:08:29 - <b>Notice</b>: Undefined index: druk in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/product/product.php</b> on line <b>1077</b>
+2014-10-13 10:08:30 - <b>Notice</b>: Undefined index: druk in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/product/product.php</b> on line <b>1077</b>
+2014-10-14 8:53:45 - <b>Notice</b>: Undefined index: druk in <b>/home/demostrona/domains/demo.stronazen.pl/public_html/rowery2/catalog/controller/product/product.php</b> on line <b>1077</b>

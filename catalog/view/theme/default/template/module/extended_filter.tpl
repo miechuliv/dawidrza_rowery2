@@ -47,8 +47,8 @@
 					<h2><?php echo $filter['name']; ?> <i class="fa fa-caret-down mobileshow mobileshowinline"></i></h2>
 					<div class="mobilehide">
 					<?php foreach($filter['values'] as $value){ ?>
-						<div>
-							<input <?php if(in_array($value['option_value_id'],$filter['selected'])){ echo 'checked="checked"';  } ?>  type="checkbox" name="filter_option[<?php echo $filter['id']; ?>][]" id="filtr<?php echo $value['option_value_id']; ?>" value="<?php echo $value['option_value_id']; ?>" /><label for="filtr<?php echo $value['option_value_id']; ?>"><?php echo $value['name']; ?></label>
+						<div class="checkbox">
+							<input class="inp" <?php if(in_array($value['option_value_id'],$filter['selected'])){ echo 'checked="checked"';  } ?>  type="checkbox" name="filter_option[<?php echo $filter['id']; ?>][]" id="filtr<?php echo $value['option_value_id']; ?>" value="<?php echo $value['option_value_id']; ?>" /><label for="filtr<?php echo $value['option_value_id']; ?>"><?php echo $value['name']; ?></label>
 						</div>
 					<?php } ?>
 					</div>
@@ -59,8 +59,8 @@
 						<h2><?php echo $filter['name']; ?> <i class="fa fa-caret-down mobileshow mobileshowinline"></i></h2>
 						<div class="mobilehide">
 						<?php foreach($filter['values'] as $value){ ?>
-							<div>
-								<input <?php if(in_array($value['text'],$filter['selected'])){ echo 'checked="checked"';  } ?>  type="checkbox" name="filter_attribute[<?php echo $filter['id']; ?>][]" value="<?php echo $value['text']; ?>" id="filtr_<?php echo $value['text']; ?>" /><label for="filtr_<?php echo $value['text']; ?>"><?php echo $value['text']; ?></label>
+							<div class="checkbox">
+								<input class="inp" <?php if(in_array($value['text'],$filter['selected'])){ echo 'checked="checked"';  } ?>  type="checkbox" name="filter_attribute[<?php echo $filter['id']; ?>][]" value="<?php echo $value['text']; ?>" id="filtr_<?php echo $value['text']; ?>" /><label for="filtr_<?php echo $value['text']; ?>"><?php echo $value['text']; ?></label>
 							</div>
 						<?php } ?>
 						</div>

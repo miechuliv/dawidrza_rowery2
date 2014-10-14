@@ -243,8 +243,8 @@ function hidedesc(divid) {
 
           <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
           <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-            <li><a href="<?php echo $manufacturer_group; ?>">Grupy producentów</a></li>
-          <li><a href="<?php echo $retailer; ?>"><?php echo $text_retailer; ?></a></li>
+            <li><a href="<?php echo $manufacturer_group; ?>"><?php echo $this->language->get('grupy_producentow'); ?></a></li>
+          <li><a href="<?php echo $retailer; ?>"><?php echo $this->language->get('dostawcy'); ?></a></li> 
        <!--   <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li> -->
           <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
           <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
