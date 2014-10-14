@@ -34,12 +34,11 @@
 				<div class="filter-price">
 					<h2><?php echo $filter['name']; ?> <i class="fa fa-caret-down mobileshow mobileshowinline"></i></h2>
 					<div class="mobilehide">
-						<label for="filter_price_min" ><?php echo $this->language->get('text_price_min'); ?></label>
-						<input name="filter_price_min" type="text" value="<?php echo $filter['min_current']; ?>" />
+						<input name="filter_price_min" type="text" value="<?php // echo $filter['min_current']; ?>" placeholder="<?php echo $this->language->get('text_price_min'); ?>" />
 					</div>
+					<div>bis.</div>
 					<div class="mobilehide">
-						<label for="filter_price_max" ><?php echo $this->language->get('text_price_max'); ?></label>
-						<input name="filter_price_max" type="text" value="<?php echo $filter['max_current']; ?>" />
+						<input name="filter_price_max" type="text" value="<?php // echo $filter['max_current']; ?>" placeholder="<?php echo $this->language->get('text_price_max'); ?>" />
 					</div>
 				</div> 
 			<?php }else if($filter['type'] == 'option'){ ?>

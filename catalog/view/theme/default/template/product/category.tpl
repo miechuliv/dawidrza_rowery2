@@ -129,6 +129,19 @@
     <?php } ?>
 
   </div>
+  
+  <? if ($thumb || $description) { ?>
+  <div class="category-info">
+    <?php if ($thumb) { ?>
+    <div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
+    <?php } ?>
+    <?php if ($description) { ?>
+    <?php echo $description; ?>
+    <?php } ?>
+  </div>
+  <?php } ?>
+  
+  
  <?php /* <div class="pagination"><?php echo $pagination; ?></div> */ ?>
   <?php }else{ ?>
 	<div id="search-error" style="text-align:left;">

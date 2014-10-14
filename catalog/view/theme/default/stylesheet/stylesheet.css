@@ -298,9 +298,13 @@ textarea {border:1px solid #ddd; resize:none; background:#fafafa; width:95%; pad
 #niehome #container > .poziom  > #content.bord {border-left:1px solid #eee;}
 .product-list > div {float:left; width:33.3333%; text-align:center; padding:0 0 50px;}
 .product-list > div .prod {width:100%; max-width:125px; margin:auto}
-.product-list > div .price {font-weight:900; display:block; width:100%; margin:5px 0; font-size:20px;}
+.product-list > div .price {display:block; width:100%; margin:5px 0; font-weight:bold}
 .s_module_content .product-list > div {width:25%;}
+.filter-price input {background:#fff; border-radius:3px; padding:5px;}
 
+.category-info {display:inline-block; padding:0 10px}
+
+#extended_search > div {margin:20px 0 0}
 
 /* PRODUCT */
 
@@ -474,7 +478,7 @@ form select {padding:10px; border:1px solid #ddd; width:87%; border-radius:3px;}
 
 .box-content div > h2 {margin:10px 0 !important; font-size:14px}
 .filter-price > div {display:inline-block;}
-.filter-price > div > input {width:30px; padding:3px; text-align:center; margin:2px 0;}
+.filter-price > div > input {width:40px; text-align:center; margin:2px 0; border-color:#ccc}
 
 .mobilehide > label {display:inline-block;}
 
